@@ -1,0 +1,57 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Lattice spacing in x,y,z = 1.6795962 1.6795962 1.6795962
+Created orthogonal box = (0 0 0) to (403.10309 403.10309 403.10309)
+  1 by 1 by 1 MPI processor grid
+Created 55296000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (403.10309 403.10309 403.10309)
+  create_atoms CPU = 29.123 seconds
+  generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update every 20 steps, delay 0 steps, check no
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 2.8
+  ghost atom cutoff = 2.8
+  binsize = 2.8, bins = 144 144 144
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/kk, perpetual
+      attributes: half, newton off, kokkos_device
+      pair build: half/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : lj
+  Current step  : 0
+  Time step     : 0.005
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Kokkos failed to allocate memory for label "neighbors".  Allocation using MemorySpace named "Cuda" failed with the following error:  Allocation of size 19.16 G failed, likely due to insufficient memory.  (The allocation mechanism was cudaMalloc().  The Cuda allocation returned the error code ""cudaErrorMemoryAllocation".)
+
+Traceback functionality not available
+
+[h28n05:1807035] *** Process received signal ***
+[h28n05:1807035] Signal: Aborted (6)
+[h28n05:1807035] Signal code:  (-6)
+[h28n05:1807035] [ 0] linux-vdso64.so.1(__kernel_sigtramp_rt64+0x0)[0x2000000504d8]
+[h28n05:1807035] [ 1] /lib64/power9/libc.so.6(gsignal+0xd8)[0x20000b983618]
+[h28n05:1807035] [ 2] /lib64/power9/libc.so.6(abort+0x164)[0x20000b963a2c]
+[h28n05:1807035] [ 3] /lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x158)[0x20000b654a98]
+[h28n05:1807035] [ 4] /lib64/libstdc++.so.6(+0xaf6d4)[0x20000b64f6d4]
+[h28n05:1807035] [ 5] /lib64/libstdc++.so.6(_ZSt9terminatev+0x20)[0x20000b64f790]
+[h28n05:1807035] [ 6] /lib64/libstdc++.so.6(__cxa_throw+0x7c)[0x20000b64fc6c]
+[h28n05:1807035] [ 7] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a78cfc]
+[h28n05:1807035] [ 8] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a8bbe4]
+[h28n05:1807035] [ 9] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a86e20]
+[h28n05:1807035] [10] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x105e5270]
+[h28n05:1807035] [11] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x1060072c]
+[h28n05:1807035] [12] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x117e3cc4]
+[h28n05:1807035] [13] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x117d4a94]
+[h28n05:1807035] [14] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x119893a0]
+[h28n05:1807035] [15] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x106fe51c]
+[h28n05:1807035] [16] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x10083aa0]
+[h28n05:1807035] [17] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x10084150]
+[h28n05:1807035] [18] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/lj/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x100179fc]
+[h28n05:1807035] [19] /lib64/power9/libc.so.6(+0x24078)[0x20000b964078]
+[h28n05:1807035] [20] /lib64/power9/libc.so.6(__libc_start_main+0xb4)[0x20000b964264]
+[h28n05:1807035] *** End of error message ***
+ERROR:  One or more process (first noticed rank 0) terminated with signal 6 (core dumped)

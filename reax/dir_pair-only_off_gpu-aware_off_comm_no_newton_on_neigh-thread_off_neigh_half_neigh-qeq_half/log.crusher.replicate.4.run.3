@@ -1,0 +1,77 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (0 0 0) to (9.491065 9.491065 6.99123)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  58 atoms
+  read_data CPU = 0.018 seconds
+Replicating atoms ...
+  orthogonal box = (0 0 0) to (303.71408 303.71408 223.71936)
+  1 by 1 by 1 MPI processor grid
+  1900544 atoms
+  replicate CPU = 0.468 seconds
+WARNING: Changed valency_val to valency_boc for X (../reaxff_ffield.cpp:296)
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+- pair reaxff command:
+- fix qeq/reaxff command:
+The log file lists these citations in BibTeX format.
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 12
+  ghost atom cutoff = 12
+  binsize = 12, bins = 26 26 19
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair reax/c/kk, perpetual
+      attributes: half, newton off, ghost, kokkos_device
+      pair build: half/bin/ghost/kk/device
+      stencil: full/ghost/bin/3d
+      bin: kk/device
+  (2) fix qeq/reax/kk, perpetual, copy from (1)
+      attributes: half, newton off, ghost, kokkos_device
+      pair build: copy/kk/device
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.1
+Per MPI rank memory allocation (min/avg/max) = 2.046e+04 | 2.046e+04 | 2.046e+04 Mbytes
+Step Temp KinEng PotEng Pxx Pyy Pzz TotEng 
+       0          300    1699547.3 -1.8912641e+08    22812.568   -29370.582    6300.2602 -1.8742686e+08 
+     100    280.56025      1589418 -1.890192e+08   -1791.5066   -7610.5326   -1746.7226 -1.8742978e+08 
+Loop time of 382.557 on 1 procs for 100 steps with 1900544 atoms
+
+Performance: 0.002 ns/day, 10626.591 hours/ns, 0.261 timesteps/s
+173.5% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 72.038     | 72.038     | 72.038     |   0.0 | 18.83
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 7.1788     | 7.1788     | 7.1788     |   0.0 |  1.88
+Output  | 0.00026031 | 0.00026031 | 0.00026031 |   0.0 |  0.00
+Modify  | 303.27     | 303.27     | 303.27     |   0.0 | 79.28
+Other   |            | 0.06784    |            |       |  0.02
+
+Nlocal:    1.90054e+06 ave 1.90054e+06 max 1.90054e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:         545059 ave      545059 max      545059 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    6.64233e+08 ave 6.64233e+08 max 6.64233e+08 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 6.6423345e+08
+Ave neighs/atom = 349.49649
+Neighbor list builds = 0
+Dangerous builds = 0
+Total wall time: 0:06:37

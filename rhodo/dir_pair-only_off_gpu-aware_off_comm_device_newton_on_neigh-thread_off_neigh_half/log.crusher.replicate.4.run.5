@@ -1,0 +1,134 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (-27.5 -38.5 -36.3646) to (27.5 38.5 36.3615)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  32000 atoms
+  reading velocities ...
+  32000 velocities
+  scanning bonds ...
+  4 = max bonds/atom
+  scanning angles ...
+  8 = max angles/atom
+  scanning dihedrals ...
+  18 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  27723 bonds
+  reading angles ...
+  40467 angles
+  reading dihedrals ...
+  56829 dihedrals
+  reading impropers ...
+  1034 impropers
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     4 = max # of 1-2 neighbors
+    12 = max # of 1-3 neighbors
+    24 = max # of 1-4 neighbors
+    26 = max # of special neighbors
+  special bonds CPU = 0.038 seconds
+  read_data CPU = 0.417 seconds
+Replicating atoms ...
+  orthogonal box = (-27.5 -38.5 -36.3646) to (192.5 269.5 254.5398)
+  1 by 1 by 1 MPI processor grid
+  2048000 atoms
+  1774272 bonds
+  2589888 angles
+  3637056 dihedrals
+  66176 impropers
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     4 = max # of 1-2 neighbors
+    12 = max # of 1-3 neighbors
+    24 = max # of 1-4 neighbors
+    26 = max # of special neighbors
+  special bonds CPU = 3.409 seconds
+  replicate CPU = 5.903 seconds
+Finding SHAKE clusters ...
+  103488 = # of size 2 clusters
+  232512 = # of size 3 clusters
+   47808 = # of size 4 clusters
+  270912 = # of frozen angles
+  find clusters CPU = 1.438 seconds
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:340)
+  G vector (1/distance) = 0.24521748
+  grid = 96 125 120
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.042505564
+  estimated relative force accuracy = 0.00012800424
+  using double precision hipFFT
+  3d grid and FFT values/proc = 1641250 1440000
+  generated 2278 of 2278 mixed pair_coeff terms from arithmetic mixing rule
+Neighbor list info ...
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 12
+  ghost atom cutoff = 12
+  binsize = 12, bins = 19 26 25
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/charmm/coul/long/kk, perpetual
+      attributes: half, newton on, kokkos_device
+      pair build: half/bin/kk/device
+      stencil: half/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 2
+WARNING: Fixes cannot yet send exchange data in Kokkos communication, switching to classic exchange/border communication (../comm_kokkos.cpp:581)
+Per MPI rank memory allocation (min/avg/max) = 3039 | 3039 | 3039 Mbytes
+---------------- Step        0 ----- CPU =      0.0000 (sec) ----------------
+TotEng   =  -1622758.4645 KinEng   =   1372469.2022 Temp     =       299.0274 
+PotEng   =  -2995227.6667 E_bond   =    162431.6167 E_angle  =    698967.9493 
+E_dihed  =    333554.3360 E_impro  =     13664.7415 E_vdwl   =   -147703.2586 
+E_coul   =  12998899.2230 E_long   = -17055042.2746 Press    =      -148.6868 
+Volume   =  19711682.1440 
+---------------- Step       50 ----- CPU =     22.0236 (sec) ----------------
+TotEng   =  -1621042.3985 KinEng   =   1376072.7780 Temp     =       299.8126 
+PotEng   =  -2997115.1765 E_bond   =    158195.5397 E_angle  =    693548.4971 
+E_dihed  =    335344.1970 E_impro  =     14535.9730 E_vdwl   =   -127551.7596 
+E_coul   =  12984284.7480 E_long   = -17055472.3717 Press    =       238.7584 
+Volume   =  19714039.4158 
+---------------- Step      100 ----- CPU =     45.4802 (sec) ----------------
+TotEng   =  -1618503.6739 KinEng   =   1381844.3636 Temp     =       301.0701 
+PotEng   =  -3000348.0375 E_bond   =    164361.2042 E_angle  =    690056.8064 
+E_dihed  =    332707.9360 E_impro  =     13870.0483 E_vdwl   =   -121503.8027 
+E_coul   =  12975291.0174 E_long   = -17055131.2471 Press    =        11.4735 
+Volume   =  19720644.8631 
+Loop time of 45.4802 on 1 procs for 100 steps with 2048000 atoms
+
+Performance: 0.380 ns/day, 63.167 hours/ns, 2.199 timesteps/s
+188.5% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 24.669     | 24.669     | 24.669     |   0.0 | 54.24
+Bond    | 1.3053     | 1.3053     | 1.3053     |   0.0 |  2.87
+Kspace  | 6.0985     | 6.0985     | 6.0985     |   0.0 | 13.41
+Neigh   | 4.8745     | 4.8745     | 4.8745     |   0.0 | 10.72
+Comm    | 7.8578     | 7.8578     | 7.8578     |   0.0 | 17.28
+Output  | 0.00030444 | 0.00030444 | 0.00030444 |   0.0 |  0.00
+Modify  | 0.60736    | 0.60736    | 0.60736    |   0.0 |  1.34
+Other   |            | 0.0677     |            |       |  0.15
+
+Nlocal:      2.048e+06 ave   2.048e+06 max   2.048e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:         600791 ave      600791 max      600791 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7.69793e+08 ave 7.69793e+08 max 7.69793e+08 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7.6979262e+08
+Ave neighs/atom = 375.8753
+Ave special neighs/atom = 7.431875
+Neighbor list builds = 11
+Dangerous builds = 0
+Total wall time: 0:01:14

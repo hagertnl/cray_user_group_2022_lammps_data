@@ -1,0 +1,121 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (3.8607916 4.2313244 6.6940699) to (78.76677 79.137303 81.600049)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  42556 atoms
+  reading velocities ...
+  42556 velocities
+  scanning bonds ...
+  2 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  10 = max dihedrals/atom
+  scanning impropers ...
+  4 = max impropers/atom
+  reading bonds ...
+  41714 bonds
+  reading angles ...
+  77373 angles
+  reading dihedrals ...
+  100012 dihedrals
+  reading impropers ...
+  47867 impropers
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     4 = max # of 1-2 neighbors
+     6 = max # of 1-3 neighbors
+    12 = max # of 1-4 neighbors
+    16 = max # of special neighbors
+  special bonds CPU = 0.046 seconds
+  read_data CPU = 2.440 seconds
+Replicating atoms ...
+  orthogonal box = (3.8607916 4.2313244 6.6940699) to (153.67275 154.04328 156.50603)
+  1 by 1 by 1 MPI processor grid
+  340448 atoms
+  333712 bonds
+  618984 angles
+  800096 dihedrals
+  382936 impropers
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     4 = max # of 1-2 neighbors
+     6 = max # of 1-3 neighbors
+    12 = max # of 1-4 neighbors
+    16 = max # of special neighbors
+  special bonds CPU = 0.373 seconds
+  replicate CPU = 1.554 seconds
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:340)
+  G vector (1/distance) = 0.29732478
+  grid = 90 90 90
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0036969902
+  estimated relative force accuracy = 1.1133376e-05
+  using double precision cuFFT
+  3d grid and FFT values/proc = 912673 729000
+  generated 0 of 36 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 11
+  ghost atom cutoff = 11
+  binsize = 11, bins = 14 14 14
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/class2/coul/long/kk, perpetual
+      attributes: full, newton on, kokkos_device
+      pair build: full/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.01
+Per MPI rank memory allocation (min/avg/max) = 512.3 | 512.3 | 512.3 Mbytes
+---------------- Step        0 ----- CPU =      0.0000 (sec) ----------------
+TotEng   =    240651.3878 KinEng   =    314742.6513 Temp     =       310.1500 
+PotEng   =    -74091.2634 E_bond   =    111979.1922 E_angle  =    212877.4533 
+E_dihed  =   -223534.8731 E_impro  =      6617.4692 E_vdwl   =   -147056.8852 
+E_coul   =    865236.5250 E_long   =   -900210.1449 Press    =     -5452.8651 
+---------------- Step      100 ----- CPU =      3.9993 (sec) ----------------
+TotEng   =    240650.4471 KinEng   =    315662.2994 Temp     =       311.0562 
+PotEng   =    -75011.8524 E_bond   =    111227.3585 E_angle  =    212699.5068 
+E_dihed  =   -223528.9828 E_impro  =      6652.0837 E_vdwl   =   -147063.7404 
+E_coul   =    865210.7173 E_long   =   -900208.7956 Press    =     -5361.2194 
+Loop time of 3.9993 on 1 procs for 100 steps with 340448 atoms
+
+Performance: 0.022 ns/day, 1110.917 hours/ns, 25.004 timesteps/s
+84.2% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.16311    | 0.16311    | 0.16311    |   0.0 |  4.08
+Bond    | 1.5691     | 1.5691     | 1.5691     |   0.0 | 39.24
+Kspace  | 1.6262     | 1.6262     | 1.6262     |   0.0 | 40.66
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.48139    | 0.48139    | 0.48139    |   0.0 | 12.04
+Output  | 0.00017054 | 0.00017054 | 0.00017054 |   0.0 |  0.00
+Modify  | 0.13963    | 0.13963    | 0.13963    |   0.0 |  3.49
+Other   |            | 0.01968    |            |       |  0.49
+
+Nlocal:         340448 ave      340448 max      340448 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:         173046 ave      173046 max      173046 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:              0 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  1.92229e+08 ave 1.92229e+08 max 1.92229e+08 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1.9222944e+08
+Ave neighs/atom = 564.63671
+Ave special neighs/atom = 10.296973
+Neighbor list builds = 0
+Dangerous builds = 0
+Total wall time: 0:00:16

@@ -1,0 +1,53 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (0 0 0) to (9.491065 9.491065 6.99123)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  58 atoms
+  read_data CPU = 0.026 seconds
+Replicating atoms ...
+  orthogonal box = (0 0 0) to (455.57112 455.57112 335.57904)
+  1 by 1 by 1 MPI processor grid
+  6414336 atoms
+  replicate CPU = 2.035 seconds
+WARNING: Changed valency_val to valency_boc for X (../reaxff_ffield.cpp:296)
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+- pair reaxff command:
+- fix qeq/reaxff command:
+The log file lists these citations in BibTeX format.
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 12
+  ghost atom cutoff = 12
+  binsize = 12, bins = 38 38 28
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair reax/c/kk, perpetual
+      attributes: half, newton off, ghost, kokkos_device
+      pair build: half/bin/ghost/kk/device
+      stencil: full/ghost/bin/3d
+      bin: kk/device
+  (2) fix qeq/reax/kk/host, perpetual
+      attributes: half, newton off, ghost, kokkos_host
+      pair build: half/bin/ghost/kk/host
+      stencil: full/ghost/bin/3d
+      bin: kk/host
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Kokkos failed to allocate memory for label "qeq/kk:jlist".  Allocation using MemorySpace named "Host" failed with the following error:  Allocation of size 1.718e+10 G failed, likely due to insufficient memory.  (The allocation mechanism was standard malloc().)
+
+Traceback functionality not available
+
+srun: error: crusher135: task 0: Aborted
+srun: launch/slurm: _step_signal: Terminating StepId=93406.237

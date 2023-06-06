@@ -1,0 +1,62 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (108.62 108.62 54.31)
+  1 by 1 by 1 MPI processor grid
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (108.62 108.62 54.31)
+  create_atoms CPU = 0.020 seconds
+Replicating atoms ...
+  orthogonal box = (0 0 0) to (1303.44 1303.44 651.72)
+  1 by 1 by 1 MPI processor grid
+  55296000 atoms
+  replicate CPU = 23.536 seconds
+Reading tersoff potential file Si.tersoff with DATE: 2007-10-25
+Neighbor list info ...
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 4.2
+  binsize = 4.2, bins = 311 311 156
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair tersoff/kk, perpetual
+      attributes: full, newton on, kokkos_device
+      pair build: full/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 9170 | 9170 | 9170 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000 -2.5604327e+08            0 -2.488957e+08    7019.6588 
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Kokkos failed to allocate memory for label "VerletKokkos::f_merge_copy".  Allocation using MemorySpace named "Cuda" failed with the following error:  Allocation of size 1.273 G failed, likely due to insufficient memory.  (The allocation mechanism was cudaMalloc().  The Cuda allocation returned the error code ""cudaErrorMemoryAllocation".)
+
+Traceback functionality not available
+
+[h29n03:1935278] *** Process received signal ***
+[h29n03:1935278] Signal: Aborted (6)
+[h29n03:1935278] Signal code:  (-6)
+[h29n03:1935278] [ 0] linux-vdso64.so.1(__kernel_sigtramp_rt64+0x0)[0x2000000504d8]
+[h29n03:1935278] [ 1] /lib64/power9/libc.so.6(gsignal+0xd8)[0x20000b983618]
+[h29n03:1935278] [ 2] /lib64/power9/libc.so.6(abort+0x164)[0x20000b963a2c]
+[h29n03:1935278] [ 3] /lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x158)[0x20000b654a98]
+[h29n03:1935278] [ 4] /lib64/libstdc++.so.6(+0xaf6d4)[0x20000b64f6d4]
+[h29n03:1935278] [ 5] /lib64/libstdc++.so.6(_ZSt9terminatev+0x20)[0x20000b64f790]
+[h29n03:1935278] [ 6] /lib64/libstdc++.so.6(__cxa_throw+0x7c)[0x20000b64fc6c]
+[h29n03:1935278] [ 7] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tersoff/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a78cfc]
+[h29n03:1935278] [ 8] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tersoff/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a8bbe4]
+[h29n03:1935278] [ 9] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tersoff/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a86e20]
+[h29n03:1935278] [10] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tersoff/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x119925c4]
+[h29n03:1935278] [11] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tersoff/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x1198e540]
+[h29n03:1935278] [12] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tersoff/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x106fe564]
+[h29n03:1935278] [13] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tersoff/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x10083aa0]
+[h29n03:1935278] [14] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tersoff/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x10084150]
+[h29n03:1935278] [15] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tersoff/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x100179fc]
+[h29n03:1935278] [16] /lib64/power9/libc.so.6(+0x24078)[0x20000b964078]
+[h29n03:1935278] [17] /lib64/power9/libc.so.6(__libc_start_main+0xb4)[0x20000b964264]
+[h29n03:1935278] *** End of error message ***
+ERROR:  One or more process (first noticed rank 0) terminated with signal 6 (core dumped)

@@ -1,0 +1,31 @@
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Kokkos failed to allocate memory for label "neighlist:neighbors".  Allocation using MemorySpace named "Cuda" failed with the following error:  Allocation of size 7.492 G failed, likely due to insufficient memory.  (The allocation mechanism was cudaMalloc().  The Cuda allocation returned the error code ""cudaErrorMemoryAllocation".)
+
+Traceback functionality not available
+
+[h29n08:2918243] *** Process received signal ***
+[h29n08:2918243] Signal: Aborted (6)
+[h29n08:2918243] Signal code:  (-6)
+[h29n08:2918243] [ 0] linux-vdso64.so.1(__kernel_sigtramp_rt64+0x0)[0x2000000504d8]
+[h29n08:2918243] [ 1] /lib64/power9/libc.so.6(gsignal+0xd8)[0x20000b983618]
+[h29n08:2918243] [ 2] /lib64/power9/libc.so.6(abort+0x164)[0x20000b963a2c]
+[h29n08:2918243] [ 3] /lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x158)[0x20000b654a98]
+[h29n08:2918243] [ 4] /lib64/libstdc++.so.6(+0xaf6d4)[0x20000b64f6d4]
+[h29n08:2918243] [ 5] /lib64/libstdc++.so.6(_ZSt9terminatev+0x20)[0x20000b64f790]
+[h29n08:2918243] [ 6] /lib64/libstdc++.so.6(__cxa_throw+0x7c)[0x20000b64fc6c]
+[h29n08:2918243] [ 7] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x11a78cfc]
+[h29n08:2918243] [ 8] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x11a8bbe4]
+[h29n08:2918243] [ 9] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x11a86e20]
+[h29n08:2918243] [10] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x11794458]
+[h29n08:2918243] [11] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x1021b898]
+[h29n08:2918243] [12] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x117e3cc4]
+[h29n08:2918243] [13] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x117d4a94]
+[h29n08:2918243] [14] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x119893a0]
+[h29n08:2918243] [15] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x106fe51c]
+[h29n08:2918243] [16] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x10083aa0]
+[h29n08:2918243] [17] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x10084150]
+[h29n08:2918243] [18] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/reax/dir_pair-only_off_gpu-aware_off_comm_no_newton_on_neigh-thread_off_neigh_half_neigh-qeq_full/../../lammps/bin/lmp_summit[0x100179fc]
+[h29n08:2918243] [19] /lib64/power9/libc.so.6(+0x24078)[0x20000b964078]
+[h29n08:2918243] [20] /lib64/power9/libc.so.6(__libc_start_main+0xb4)[0x20000b964264]
+[h29n08:2918243] *** End of error message ***
+ERROR:  One or more process (first noticed rank 0) terminated with signal 6 (core dumped)

@@ -1,0 +1,100 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (0.11598334 0.11598334 0.11598334) to (76.884017 76.884017 76.884017)
+  1 by 1 by 1 MPI processor grid
+WARNING: Pair style in data file differs from currently defined pair style (../read_data.cpp:613)
+  reading atoms ...
+  45000 atoms
+  reading velocities ...
+  45000 velocities
+  scanning bonds ...
+  2 = max bonds/atom
+  scanning angles ...
+  1 = max angles/atom
+  reading bonds ...
+  30000 bonds
+  reading angles ...
+  15000 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     1 = max # of 1-3 neighbors
+     1 = max # of 1-4 neighbors
+     2 = max # of special neighbors
+  special bonds CPU = 0.012 seconds
+  read_data CPU = 0.613 seconds
+Replicating atoms ...
+  orthogonal box = (0.11598334 0.11598334 0.11598334) to (460.72418 460.72418 460.72418)
+  1 by 1 by 1 MPI processor grid
+  9720000 atoms
+  6480000 bonds
+  3240000 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     1 = max # of 1-3 neighbors
+     1 = max # of 1-4 neighbors
+     2 = max # of special neighbors
+  special bonds CPU = 11.736 seconds
+  replicate CPU = 34.722 seconds
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:340)
+  G vector (1/distance) = 0.23076479
+  grid = 288 288 288
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0035267981
+  estimated relative force accuracy = 1.0620848e-05
+  using double precision cuFFT
+  3d grid and FFT values/proc = 25672375 23887872
+  generated 0 of 1 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 15
+  ghost atom cutoff = 15
+  binsize = 15, bins = 31 31 31
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/class2/coul/long/kk, perpetual
+      attributes: half, newton off, kokkos_device
+      pair build: half/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.01
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Kokkos failed to allocate memory for label "neighbors".  Allocation using MemorySpace named "Cuda" failed with the following error:  Allocation of size 61.99 G failed, likely due to insufficient memory.  (The allocation mechanism was cudaMalloc().  The Cuda allocation returned the error code ""cudaErrorMemoryAllocation".)
+
+Traceback functionality not available
+
+[h33n18:851750] *** Process received signal ***
+[h33n18:851750] Signal: Aborted (6)
+[h33n18:851750] Signal code:  (-6)
+[h33n18:851750] [ 0] linux-vdso64.so.1(__kernel_sigtramp_rt64+0x0)[0x2000000504d8]
+[h33n18:851750] [ 1] /lib64/power9/libc.so.6(gsignal+0xd8)[0x20000b983618]
+[h33n18:851750] [ 2] /lib64/power9/libc.so.6(abort+0x164)[0x20000b963a2c]
+[h33n18:851750] [ 3] /lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x158)[0x20000b654a98]
+[h33n18:851750] [ 4] /lib64/libstdc++.so.6(+0xaf6d4)[0x20000b64f6d4]
+[h33n18:851750] [ 5] /lib64/libstdc++.so.6(_ZSt9terminatev+0x20)[0x20000b64f790]
+[h33n18:851750] [ 6] /lib64/libstdc++.so.6(__cxa_throw+0x7c)[0x20000b64fc6c]
+[h33n18:851750] [ 7] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a78cfc]
+[h33n18:851750] [ 8] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a8bbe4]
+[h33n18:851750] [ 9] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a86e20]
+[h33n18:851750] [10] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x105e5270]
+[h33n18:851750] [11] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x1060072c]
+[h33n18:851750] [12] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x117e3cc4]
+[h33n18:851750] [13] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x117d4a94]
+[h33n18:851750] [14] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x119893a0]
+[h33n18:851750] [15] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x106fe51c]
+[h33n18:851750] [16] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x10083aa0]
+[h33n18:851750] [17] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x10084150]
+[h33n18:851750] [18] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/tip3p/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x100179fc]
+[h33n18:851750] [19] /lib64/power9/libc.so.6(+0x24078)[0x20000b964078]
+[h33n18:851750] [20] /lib64/power9/libc.so.6(__libc_start_main+0xb4)[0x20000b964264]
+[h33n18:851750] *** End of error message ***
+ERROR:  One or more process (first noticed rank 0) terminated with signal 6 (core dumped)

@@ -1,0 +1,112 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (3.8607916 4.2313244 6.6940699) to (78.76677 79.137303 81.600049)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  42556 atoms
+  reading velocities ...
+  42556 velocities
+  scanning bonds ...
+  2 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  10 = max dihedrals/atom
+  scanning impropers ...
+  4 = max impropers/atom
+  reading bonds ...
+  41714 bonds
+  reading angles ...
+  77373 angles
+  reading dihedrals ...
+  100012 dihedrals
+  reading impropers ...
+  47867 impropers
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     4 = max # of 1-2 neighbors
+     6 = max # of 1-3 neighbors
+    12 = max # of 1-4 neighbors
+    16 = max # of special neighbors
+  special bonds CPU = 0.031 seconds
+  read_data CPU = 1.657 seconds
+Replicating atoms ...
+  orthogonal box = (3.8607916 4.2313244 6.6940699) to (453.29666 453.6672 456.12994)
+  1 by 1 by 1 MPI processor grid
+  9192096 atoms
+  9010224 bonds
+  16712568 angles
+  21602592 dihedrals
+  10339272 impropers
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     4 = max # of 1-2 neighbors
+     6 = max # of 1-3 neighbors
+    12 = max # of 1-4 neighbors
+    16 = max # of special neighbors
+  special bonds CPU = 19.923 seconds
+  replicate CPU = 43.610 seconds
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:340)
+  G vector (1/distance) = 0.29732478
+  grid = 270 270 270
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0036969903
+  estimated relative force accuracy = 1.1133376e-05
+  using double precision cuFFT
+  3d grid and FFT values/proc = 21253933 19683000
+  generated 0 of 36 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 11
+  ghost atom cutoff = 11
+  binsize = 11, bins = 41 41 41
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/class2/coul/long/kk, perpetual
+      attributes: full, newton on, kokkos_device
+      pair build: full/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.01
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Kokkos failed to allocate memory for label "atom:dihedral_atom4".  Allocation using MemorySpace named "Cuda" failed with the following error:  Allocation of size 354.2 M failed, likely due to insufficient memory.  (The allocation mechanism was cudaMalloc().  The Cuda allocation returned the error code ""cudaErrorMemoryAllocation".)
+
+Traceback functionality not available
+
+[h50n03:3361921] *** Process received signal ***
+[h50n03:3361921] Signal: Aborted (6)
+[h50n03:3361921] Signal code:  (-6)
+[h50n03:3361921] [ 0] linux-vdso64.so.1(__kernel_sigtramp_rt64+0x0)[0x2000000504d8]
+[h50n03:3361921] [ 1] /lib64/power9/libc.so.6(gsignal+0xd8)[0x20000b983618]
+[h50n03:3361921] [ 2] /lib64/power9/libc.so.6(abort+0x164)[0x20000b963a2c]
+[h50n03:3361921] [ 3] /lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x158)[0x20000b654a98]
+[h50n03:3361921] [ 4] /lib64/libstdc++.so.6(+0xaf6d4)[0x20000b64f6d4]
+[h50n03:3361921] [ 5] /lib64/libstdc++.so.6(_ZSt9terminatev+0x20)[0x20000b64f790]
+[h50n03:3361921] [ 6] /lib64/libstdc++.so.6(__cxa_throw+0x7c)[0x20000b64fc6c]
+[h50n03:3361921] [ 7] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x11a78cfc]
+[h50n03:3361921] [ 8] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x11a8bbe4]
+[h50n03:3361921] [ 9] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x11a86e20]
+[h50n03:3361921] [10] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x10138dcc]
+[h50n03:3361921] [11] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x1016a130]
+[h50n03:3361921] [12] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x1016a580]
+[h50n03:3361921] [13] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x1084b360]
+[h50n03:3361921] [14] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x1083f74c]
+[h50n03:3361921] [15] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x1158469c]
+[h50n03:3361921] [16] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x11576148]
+[h50n03:3361921] [17] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x11989330]
+[h50n03:3361921] [18] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x106fe51c]
+[h50n03:3361921] [19] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x10083aa0]
+[h50n03:3361921] [20] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x10084150]
+[h50n03:3361921] [21] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_on_neigh-thread_off_neigh_full/../../lammps/bin/lmp_summit[0x100179fc]
+[h50n03:3361921] [22] /lib64/power9/libc.so.6(+0x24078)[0x20000b964078]
+[h50n03:3361921] [23] /lib64/power9/libc.so.6(__libc_start_main+0xb4)[0x20000b964264]
+[h50n03:3361921] *** End of error message ***
+ERROR:  One or more process (first noticed rank 0) terminated with signal 6 (core dumped)

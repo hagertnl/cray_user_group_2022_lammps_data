@@ -1,0 +1,36 @@
+units          real
+atom_style     full
+boundary       p p p
+
+# from http://www.orsi.sems.qmul.ac.uk/downloads/forcefield.TIP3P-Ew
+
+variable x index 1
+variable y index 1
+variable z index 1
+
+pair_style          lj/class2/coul/long 13.0
+bond_style          harmonic
+angle_style         harmonic
+
+kspace_style        pppm 1.0e-5
+
+read_data           tip3p.data
+
+replicate $x $y $z
+
+neighbor        2.0 bin
+
+variable       mytemp equal 310.15
+velocity all create ${mytemp} 12345
+
+thermo         100
+thermo_style   multi
+
+timestep       0.01
+
+fix 1 all nve
+
+run 100
+
+unfix 1
+

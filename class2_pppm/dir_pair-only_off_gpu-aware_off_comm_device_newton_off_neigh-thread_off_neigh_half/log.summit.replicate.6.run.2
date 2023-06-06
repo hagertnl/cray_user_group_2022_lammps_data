@@ -1,0 +1,29 @@
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Kokkos failed to allocate memory for label "neigh:xhold".  Allocation using MemorySpace named "Cuda" failed with the following error:  Allocation of size 210.4 M failed, likely due to insufficient memory.  (The allocation mechanism was cudaMalloc().  The Cuda allocation returned the error code ""cudaErrorMemoryAllocation".)
+
+Traceback functionality not available
+
+[b29n15:1314853] *** Process received signal ***
+[b29n15:1314853] Signal: Aborted (6)
+[b29n15:1314853] Signal code:  (-6)
+[b29n15:1314853] [ 0] linux-vdso64.so.1(__kernel_sigtramp_rt64+0x0)[0x2000000504d8]
+[b29n15:1314853] [ 1] /lib64/power9/libc.so.6(gsignal+0xd8)[0x20000b983618]
+[b29n15:1314853] [ 2] /lib64/power9/libc.so.6(abort+0x164)[0x20000b963a2c]
+[b29n15:1314853] [ 3] /lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x158)[0x20000b654a98]
+[b29n15:1314853] [ 4] /lib64/libstdc++.so.6(+0xaf6d4)[0x20000b64f6d4]
+[b29n15:1314853] [ 5] /lib64/libstdc++.so.6(_ZSt9terminatev+0x20)[0x20000b64f790]
+[b29n15:1314853] [ 6] /lib64/libstdc++.so.6(__cxa_throw+0x7c)[0x20000b64fc6c]
+[b29n15:1314853] [ 7] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a78cfc]
+[b29n15:1314853] [ 8] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a8bbe4]
+[b29n15:1314853] [ 9] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x11a86e20]
+[b29n15:1314853] [10] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x117e3144]
+[b29n15:1314853] [11] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x117d473c]
+[b29n15:1314853] [12] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x10560728]
+[b29n15:1314853] [13] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x106fe4f4]
+[b29n15:1314853] [14] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x10083aa0]
+[b29n15:1314853] [15] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x10084150]
+[b29n15:1314853] [16] /gpfs/alpine/proj-shared/stf016/hagertnl/CUG22/lammps_tests/class2_pppm/dir_pair-only_off_gpu-aware_off_comm_device_newton_off_neigh-thread_off_neigh_half/../../lammps/bin/lmp_summit[0x100179fc]
+[b29n15:1314853] [17] /lib64/power9/libc.so.6(+0x24078)[0x20000b964078]
+[b29n15:1314853] [18] /lib64/power9/libc.so.6(__libc_start_main+0xb4)[0x20000b964264]
+[b29n15:1314853] *** End of error message ***
+ERROR:  One or more process (first noticed rank 0) terminated with signal 6 (core dumped)

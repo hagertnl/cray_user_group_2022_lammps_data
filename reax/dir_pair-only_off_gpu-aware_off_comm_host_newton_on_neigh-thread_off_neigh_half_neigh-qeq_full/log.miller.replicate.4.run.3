@@ -1,0 +1,54 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (0 0 0) to (9.491065 9.491065 6.99123)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  58 atoms
+  read_data CPU = 0.002 seconds
+Replicating atoms ...
+  orthogonal box = (0 0 0) to (303.71408 303.71408 223.71936)
+  1 by 1 by 1 MPI processor grid
+  1900544 atoms
+  replicate CPU = 0.600 seconds
+WARNING: Changed valency_val to valency_boc for X (../reaxff_ffield.cpp:296)
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+- pair reaxff command:
+- fix qeq/reaxff command:
+The log file lists these citations in BibTeX format.
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 12
+  ghost atom cutoff = 12
+  binsize = 12, bins = 26 26 19
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair reax/c/kk, perpetual, half/full from (2)
+      attributes: half, newton off, ghost, kokkos_device
+      pair build: halffull/newtoff/ghost/kk/device
+      stencil: none
+      bin: none
+  (2) fix qeq/reax/kk, perpetual
+      attributes: full, newton off, ghost, kokkos_device
+      pair build: full/bin/ghost/kk/device
+      stencil: full/ghost/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.1
+WARNING: Fixes cannot yet send exchange data in Kokkos communication, switching to classic exchange/border communication (../comm_kokkos.cpp:581)
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Kokkos failed to allocate memory for label "reaxff/kk:Cdbo".  Allocation using MemorySpace named "Cuda" failed with the following error:  Allocation of size 901.5 M failed, likely due to insufficient memory.  (The allocation mechanism was cudaMalloc().  The Cuda allocation returned the error code ""cudaErrorMemoryAllocation".)
+
+Traceback functionality not available
+
+srun: error: miller0805: task 0: Aborted (core dumped)
+srun: launch/slurm: _step_signal: Terminating StepId=67331604.52

@@ -1,0 +1,68 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (0 0 0) to (40 20 37.2886)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  32000 atoms
+  reading velocities ...
+  32000 velocities
+  read_data CPU = 0.097 seconds
+Replicating atoms ...
+  orthogonal box = (0 0 0) to (160 80 37.292229)
+  1 by 1 by 1 MPI processor grid
+  512000 atoms
+  replicate CPU = 0.215 seconds
+14592 atoms in group bottom
+497408 atoms in group active
+  generated 0 of 1 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 1.1
+  ghost atom cutoff = 1.1
+  binsize = 1.1, bins = 146 73 34
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair gran/hooke/history/kk, perpetual
+      attributes: half, newton off, size, history, kokkos_device
+      pair build: half/size/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : lj
+  Current step  : 0
+  Time step     : 0.0001
+WARNING: Fixes cannot yet send exchange data in Kokkos communication, switching to classic exchange/border communication (../comm_kokkos.cpp:581)
+Per MPI rank memory allocation (min/avg/max) = 591.4 | 591.4 | 591.4 Mbytes
+Step Atoms KinEng c_1 Volume 
+       0   512000     12546226    25618.021    477340.53 
+     100   512000     12548677    25138.326    477355.32 
+     200   512000     12550774     25184.42    477379.69 
+Loop time of 1.57777 on 1 procs for 200 steps with 512000 atoms
+
+Performance: 1095.218 tau/day, 126.761 timesteps/s
+95.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.71514    | 0.71514    | 0.71514    |   0.0 | 45.33
+Neigh   | 0.026118   | 0.026118   | 0.026118   |   0.0 |  1.66
+Comm    | 0.70249    | 0.70249    | 0.70249    |   0.0 | 44.52
+Output  | 0.0039449  | 0.0039449  | 0.0039449  |   0.0 |  0.25
+Modify  | 0.090179   | 0.090179   | 0.090179   |   0.0 |  5.72
+Other   |            | 0.03989    |            |       |  2.53
+
+Nlocal:         512000 ave      512000 max      512000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:          21373 ave       21373 max       21373 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:     1.7903e+06 ave  1.7903e+06 max  1.7903e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1790302
+Ave neighs/atom = 3.4966836
+Neighbor list builds = 5
+Dangerous builds = 0
+Total wall time: 0:00:02

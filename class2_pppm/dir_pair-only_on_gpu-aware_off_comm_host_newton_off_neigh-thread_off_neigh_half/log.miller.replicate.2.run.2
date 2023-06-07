@@ -1,0 +1,65 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (3.8607916 4.2313244 6.6940699) to (78.76677 79.137303 81.600049)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  42556 atoms
+  reading velocities ...
+  42556 velocities
+  scanning bonds ...
+  4 = max bonds/atom
+  scanning angles ...
+  12 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  10 = max impropers/atom
+  reading bonds ...
+  41714 bonds
+  reading angles ...
+  77373 angles
+  reading dihedrals ...
+  100012 dihedrals
+  reading impropers ...
+  47867 impropers
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     4 = max # of 1-2 neighbors
+     6 = max # of 1-3 neighbors
+    12 = max # of 1-4 neighbors
+    16 = max # of special neighbors
+  special bonds CPU = 0.020 seconds
+  read_data CPU = 0.672 seconds
+Replicating atoms ...
+  orthogonal box = (3.8607916 4.2313244 6.6940699) to (153.67275 154.04328 156.50603)
+  1 by 1 by 1 MPI processor grid
+  340448 atoms
+  333712 bonds
+  618984 angles
+  800096 dihedrals
+  382936 impropers
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     4 = max # of 1-2 neighbors
+     6 = max # of 1-3 neighbors
+    12 = max # of 1-4 neighbors
+    16 = max # of special neighbors
+  special bonds CPU = 0.155 seconds
+  replicate CPU = 0.696 seconds
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:340)
+  G vector (1/distance) = 0.29732478
+  grid = 90 90 90
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0036969902
+  estimated relative force accuracy = 1.1133376e-05
+  using double precision cuFFT
+  3d grid and FFT values/proc = 912673 729000
+ERROR: Cannot use the cuFFT library with Kokkos CUDA on the host CPUs (../fft3d_kokkos.cpp:55)
+Last command: run 100
+srun: error: miller0802: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=67331598.166

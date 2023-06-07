@@ -1,0 +1,117 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (0 0 0) to (9.491065 9.491065 6.99123)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  58 atoms
+  read_data CPU = 0.002 seconds
+Replicating atoms ...
+  orthogonal box = (0 0 0) to (303.71408 303.71408 223.71936)
+  1 by 1 by 1 MPI processor grid
+  1900544 atoms
+  replicate CPU = 0.564 seconds
+WARNING: Changed valency_val to valency_boc for X (../reaxff_ffield.cpp:296)
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+- pair reaxff command:
+- fix qeq/reaxff command:
+The log file lists these citations in BibTeX format.
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 12
+  ghost atom cutoff = 12
+  binsize = 12, bins = 26 26 19
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair reax/c/kk, perpetual
+      attributes: half, newton off, ghost, kokkos_device
+      pair build: half/bin/ghost/kk/device
+      stencil: full/ghost/bin/3d
+      bin: kk/device
+  (2) fix qeq/reax/kk/host, perpetual
+      attributes: half, newton off, ghost, kokkos_host
+      pair build: half/bin/ghost/kk/host
+      stencil: full/ghost/bin/3d
+      bin: kk/host
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.1
+WARNING: Fixes cannot yet send exchange data in Kokkos communication, switching to classic exchange/border communication (../comm_kokkos.cpp:581)
+:0: : block: [26,0,0], thread: [0,96,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,97,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,98,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,99,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,100,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,101,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,102,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,103,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,104,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,105,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,106,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,107,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,108,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,109,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,110,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,111,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,112,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,113,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,114,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,115,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,116,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,117,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,118,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,119,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,120,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,121,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,122,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,123,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,124,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,125,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,126,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [26,0,0], thread: [0,127,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,32,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,33,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,34,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,35,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,36,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,37,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,38,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,39,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,40,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,41,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,42,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,43,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,44,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,45,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,46,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,47,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,48,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,49,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,50,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,51,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,52,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,53,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,54,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,55,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,56,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,57,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,58,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,59,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,60,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,61,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,62,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+:0: : block: [68,0,0], thread: [0,63,0] Assertion `Kokkos::View ERROR: attempt to access inaccessible memory space` failed.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  cudaEventSynchronize(cuda_instance->constantMemReusable) error( cudaErrorAssert): device-side assert triggered ../../lib/kokkos/core/src/Cuda/Kokkos_Cuda_KernelLaunch.hpp:543
+Traceback functionality not available
+
+srun: error: miller0805: task 0: Aborted (core dumped)
+srun: launch/slurm: _step_signal: Terminating StepId=67331604.190

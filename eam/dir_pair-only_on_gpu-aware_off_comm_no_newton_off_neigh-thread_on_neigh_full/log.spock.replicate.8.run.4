@@ -1,0 +1,60 @@
+LAMMPS (17 Feb 2022)
+KOKKOS mode is enabled (../kokkos.cpp:105)
+  will use up to 1 GPU(s) per node
+Lattice spacing in x,y,z = 3.615 3.615 3.615
+Created orthogonal box = (0 0 0) to (578.4 578.4 578.4)
+  1 by 1 by 1 MPI processor grid
+Created 16384000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (578.4 578.4 578.4)
+  create_atoms CPU = 6.318 seconds
+Reading eam potential file Cu_u3.eam with DATE: 2007-06-11
+Neighbor list info ...
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 5.95
+  ghost atom cutoff = 5.95
+  binsize = 5.95, bins = 98 98 98
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/kk, perpetual
+      attributes: full, newton off, kokkos_device
+      pair build: full/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.005
+Per MPI rank memory allocation (min/avg/max) = 3090 | 3090 | 3090 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1600    -57999360            0    -54610883    18704.157 
+      50    780.77927    -56253216            0    -54599683    52282.705 
+     100    798.44137    -56290845            0    -54599907    51468.777 
+Loop time of 48.2737 on 1 procs for 100 steps with 16384000 atoms
+
+Performance: 0.895 ns/day, 26.819 hours/ns, 2.072 timesteps/s
+132.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 10.304     | 10.304     | 10.304     |   0.0 | 21.34
+Neigh   | 3.3446     | 3.3446     | 3.3446     |   0.0 |  6.93
+Comm    | 4.7274     | 4.7274     | 4.7274     |   0.0 |  9.79
+Output  | 0.070165   | 0.070165   | 0.070165   |   0.0 |  0.15
+Modify  | 27.339     | 27.339     | 27.339     |   0.0 | 56.63
+Other   |            | 2.489      |            |       |  5.16
+
+Nlocal:     1.6384e+07 ave  1.6384e+07 max  1.6384e+07 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1.09881e+06 ave 1.09881e+06 max 1.09881e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:              0 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  1.23627e+09 ave 1.23627e+09 max 1.23627e+09 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1.2362655e+09
+Ave neighs/atom = 75.45566
+Neighbor list builds = 16
+Dangerous builds = 0
+Total wall time: 0:01:02
